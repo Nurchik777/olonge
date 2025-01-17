@@ -150,6 +150,7 @@ body {
   flex-direction: column;
   align-items: center;
   color: #FFFFFF;
+  animation: fadeIn 1s ease-out;
 }
 @media (min-width: 480px) {
   .hero__content {
@@ -313,14 +314,12 @@ body {
   position: absolute;
 }
 .showcase__phone--first {
-  top: -36rem;
-  left: -22.75rem;
-  z-index: 10;
+  animation: bounce 2s infinite ease-in-out;
 }
 @media (min-width: 480px) {
   .showcase__phone--first {
     width: 22rem;
-    top: -20.5rem;
+    top: -19.5rem;
     left: -13.5rem;
     z-index: 10;
   }
@@ -336,14 +335,13 @@ body {
 @media (min-width: 1024px) {
   .showcase__phone--first {
     width: min-content;
-    top: -36rem;
+    top: -34rem;
     left: -22.75rem;
     z-index: 10;
   }
 }
 .showcase__phone--second {
-  top: -22.5rem;
-  right: -17.75rem;
+  animation: bounce 2s infinite ease-in-out 0.5s;
 }
 @media (min-width: 480px) {
   .showcase__phone--second {
@@ -362,7 +360,7 @@ body {
 @media (min-width: 1024px) {
   .showcase__phone--second {
     width: min-content;
-    top: -22.5rem;
+    top: -20.5rem;
     right: -17.75rem;
   }
 }
@@ -403,6 +401,7 @@ body {
   font-weight: 600;
   text-align: center;
   color: #252B42;
+  animation: scaleIn 1s ease-out;
 }
 @media (min-width: 480px) {
   .features__heading {
@@ -527,6 +526,7 @@ body {
 .features__image {
   max-width: 100%;
   height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 @media (min-width: 480px) {
   .features__image {
@@ -588,6 +588,7 @@ body {
 }
 .footer__title {
   font-weight: 700;
+  animation: scaleIn 1s ease-out;
 }
 @media (min-width: 480px) {
   .footer__title {
@@ -607,6 +608,7 @@ body {
 .footer__description {
   font-weight: 500;
   text-align: center;
+  animation: fadeInLeft 1s ease-out;
 }
 @media (min-width: 480px) {
   .footer__description {
@@ -628,6 +630,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  animation: slideIn 1.2s ease-out;
 }
 .footer__buttons .button {
   font-weight: 700;
@@ -773,6 +776,55 @@ body {
 @media (min-width: 768px) {
   .footer__copyright {
     font-size: 1rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
