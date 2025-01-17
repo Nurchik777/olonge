@@ -1,0 +1,14 @@
+{
+  "name": "olonge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:sass": "sass src/sass/main.sass src/css/main.css",
+    "watch:sass": "sass --watch src/sass/main.sass:src/css/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": ""
+}
