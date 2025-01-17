@@ -236,12 +236,26 @@ body {
 .hero__buttons .button--playstore {
   background-color: #FA4A0C;
   color: #FFFFFF;
-  border: none;
+  border: 1px solid transparent;
+}
+@media (min-width: 768px) {
+  .hero__buttons .button--playstore:hover {
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    transition: background-color 0.5s ease-in-out;
+  }
 }
 .hero__buttons .button--appstore {
   background-color: transparent;
   color: #FFFFFF;
   border: 1px solid #FFFFFF;
+}
+@media (min-width: 768px) {
+  .hero__buttons .button--appstore:hover {
+    background-color: #FA4A0C;
+    border: 1px solid transparent;
+    transition: background-color 0.5s ease-in-out;
+  }
 }
 @media (min-width: 480px) {
   .hero__buttons .button {
@@ -657,12 +671,26 @@ body {
 .footer__buttons .button--playstore {
   background-color: #FA4A0C;
   color: #FFFFFF;
-  border: none;
+  border: 1px solid transparent;
+}
+@media (min-width: 768px) {
+  .footer__buttons .button--playstore:hover {
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    transition: background-color 0.5s ease-in-out;
+  }
 }
 .footer__buttons .button--appstore {
   background-color: transparent;
   color: #FFFFFF;
   border: 1px solid #FFFFFF;
+}
+@media (min-width: 768px) {
+  .footer__buttons .button--appstore:hover {
+    background-color: #FA4A0C;
+    border: 1px solid transparent;
+    transition: background-color 0.5s ease-in-out;
+  }
 }
 @media (min-width: 480px) {
   .footer__buttons {

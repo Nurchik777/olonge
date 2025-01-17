@@ -157,12 +157,24 @@ body
       &--playstore
         background-color: variables.$primary-color
         color: variables.$white-color
-        border: none
+        border: 1px solid transparent
+
+        @include mixins.md
+          &:hover
+            background-color: transparent
+            border: 1px solid variables.$white-color
+            transition: background-color 0.5s ease-in-out
 
       &--appstore
         background-color: transparent
         color: variables.$white-color
         border: 1px solid variables.$white-color
+
+        @include mixins.md
+          &:hover
+            background-color: variables.$primary-color
+            border: 1px solid transparent
+            transition: background-color 0.5s ease-in-out
 
       @include mixins.sm
         font-size: 1rem
@@ -472,12 +484,24 @@ body
       &--playstore
         background-color: variables.$primary-color
         color: variables.$white-color
-        border: none
+        border: 1px solid transparent
+
+        @include mixins.md
+          &:hover
+            background-color: transparent
+            border: 1px solid variables.$white-color
+            transition: background-color 0.5s ease-in-out
 
       &--appstore
         background-color: transparent
         color: variables.$white-color
         border: 1px solid variables.$white-color
+
+        @include mixins.md
+          &:hover
+            background-color: variables.$primary-color
+            border: 1px solid transparent
+            transition: background-color 0.5s ease-in-out
 
     @include mixins.sm
       flex-direction: column
