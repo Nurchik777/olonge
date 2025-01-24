@@ -72,7 +72,7 @@ body {
 }
 .header__nav .menu__item-link {
   font-weight: 500;
-  color: #252B42;
+  color: #252b42;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
@@ -87,7 +87,7 @@ body {
     font-size: 1.15rem;
   }
   .header__nav .menu__item-link:hover {
-    color: #FA4A0C;
+    color: #fa4a0c;
   }
 }
 @media (min-width: 480px) {
@@ -149,7 +149,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #FFFFFF;
+  color: #ffffff;
   animation: fadeIn 1s ease-out;
 }
 @media (min-width: 480px) {
@@ -234,25 +234,25 @@ body {
   z-index: 50;
 }
 .hero__buttons .button--playstore {
-  background-color: #FA4A0C;
-  color: #FFFFFF;
+  background-color: #fa4a0c;
+  color: #ffffff;
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
   .hero__buttons .button--playstore:hover {
     background-color: transparent;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #ffffff;
     transition: background-color 0.5s ease-in-out;
   }
 }
 .hero__buttons .button--appstore {
   background-color: transparent;
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
+  color: #ffffff;
+  border: 1px solid #ffffff;
 }
 @media (min-width: 768px) {
   .hero__buttons .button--appstore:hover {
-    background-color: #FA4A0C;
+    background-color: #fa4a0c;
     border: 1px solid transparent;
     transition: background-color 0.5s ease-in-out;
   }
@@ -396,7 +396,7 @@ body {
 
 .divider {
   width: 55rem;
-  border: 0.15rem solid #E4E4E4;
+  border: 0.15rem solid #e4e4e4;
   margin: 0 auto;
 }
 @media (min-width: 480px) {
@@ -414,7 +414,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-align: center;
-  color: #252B42;
+  color: #252b42;
   animation: scaleIn 1s ease-out;
 }
 @media (min-width: 480px) {
@@ -502,11 +502,11 @@ body {
 }
 .features__step {
   font-size: 1.5rem;
-  color: #FA4A0C;
+  color: #fa4a0c;
   font-weight: 700;
 }
 .features__title {
-  color: #252B42;
+  color: #252b42;
   font-weight: 700;
 }
 @media (min-width: 480px) {
@@ -578,7 +578,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media (min-width: 480px) {
   .footer__top {
@@ -669,25 +669,25 @@ body {
   }
 }
 .footer__buttons .button--playstore {
-  background-color: #FA4A0C;
-  color: #FFFFFF;
+  background-color: #fa4a0c;
+  color: #ffffff;
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
   .footer__buttons .button--playstore:hover {
     background-color: transparent;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #ffffff;
     transition: background-color 0.5s ease-in-out;
   }
 }
 .footer__buttons .button--appstore {
   background-color: transparent;
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
+  color: #ffffff;
+  border: 1px solid #ffffff;
 }
 @media (min-width: 768px) {
   .footer__buttons .button--appstore:hover {
-    background-color: #FA4A0C;
+    background-color: #fa4a0c;
     border: 1px solid transparent;
     transition: background-color 0.5s ease-in-out;
   }
@@ -793,7 +793,7 @@ body {
 }
 .footer__copyright {
   font-weight: 700;
-  color: #5C5C5C;
+  color: #5c5c5c;
   font-family: "Roboto", sans-serif;
 }
 @media (min-width: 480px) {

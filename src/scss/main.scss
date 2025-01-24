@@ -1,0 +1,809 @@
+@use "./_variables";
+@use "./_mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: variables.$primary-font;
+}
+
+.header {
+  display: grid;
+  align-items: center;
+
+  &__logo {
+    justify-self: start;
+
+    @include mixins.sm {
+      width: min-content;
+      height: 3rem;
+    }
+
+    @include mixins.md {
+      height: 3.5rem;
+    }
+
+    @include mixins.lg {
+      height: 5rem;
+    }
+
+    @include mixins.xl {
+      height: 5.75rem;
+    }
+  }
+
+  &__nav {
+    justify-self: end;
+    .menu {
+      display: flex;
+      align-items: center;
+
+      &__item {
+        list-style: none;
+
+        &-link {
+          font-weight: 500;
+          color: variables.$dark-color;
+          text-decoration: none;
+          cursor: pointer;
+          transition: color 0.3s ease-in-out;
+
+          @include mixins.md {
+            font-size: 1.1rem;
+          }
+
+          @include mixins.lg {
+            font-size: 1.15rem;
+            &:hover {
+              color: variables.$primary-color;
+            }
+          }
+        }
+      }
+
+      @include mixins.sm {
+        gap: 1.75rem;
+      }
+
+      @include mixins.md {
+        gap: 4rem;
+      }
+
+      @include mixins.lg {
+        gap: 7rem;
+      }
+
+      @include mixins.xl {
+        gap: 8rem;
+      }
+    }
+  }
+
+  @include mixins.sm {
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem 1.15rem;
+    a {
+      width: min-content;
+    }
+  }
+
+  @include mixins.md {
+    margin: 1rem 1.25rem;
+  }
+
+  @include mixins.lg {
+    margin: 1rem 2rem;
+  }
+
+  @include mixins.xl {
+    margin: 1.5rem 2.5rem;
+  }
+}
+
+.hero {
+  background-image: url("/src/images/main-bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: variables.$white-color;
+    animation: fadeIn 1s ease-out;
+
+    @include mixins.sm {
+      gap: 1.15rem;
+    }
+
+    @include mixins.md {
+      gap: 1.5rem;
+    }
+
+    @include mixins.lg {
+      gap: 2rem;
+    }
+
+    @include mixins.xl {
+      gap: 2.25rem;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+
+    @include mixins.sm {
+      font-size: 1rem;
+    }
+
+    @include mixins.md {
+      font-size: 1.5rem;
+    }
+
+    @include mixins.lg {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-weight: 700;
+    font-family: variables.$secondary-font;
+
+    @include mixins.sm {
+      font-size: 1.5rem;
+    }
+
+    @include mixins.md {
+      font-size: 2.5rem;
+    }
+
+    @include mixins.lg {
+      font-size: 3rem;
+    }
+
+    @include mixins.xl {
+      font-size: 3.625rem;
+    }
+  }
+
+  &__description {
+    font-weight: 500;
+    z-index: 50;
+
+    @include mixins.md {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+
+    .button {
+      font-weight: 700;
+      border-radius: 1.875rem;
+      cursor: pointer;
+      z-index: 50;
+
+      &--playstore {
+        background-color: variables.$primary-color;
+        color: variables.$white-color;
+        border: 1px solid transparent;
+
+        @include mixins.md {
+          &:hover {
+            background-color: transparent;
+            border: 1px solid variables.$white-color;
+            transition: background-color 0.5s ease-in-out;
+          }
+        }
+      }
+
+      &--appstore {
+        background-color: transparent;
+        color: variables.$white-color;
+        border: 1px solid variables.$white-color;
+
+        @include mixins.md {
+          &:hover {
+            background-color: variables.$primary-color;
+            border: 1px solid transparent;
+            transition: background-color 0.5s ease-in-out;
+          }
+        }
+      }
+
+      @include mixins.sm {
+        font-size: 1rem;
+        padding: 0.35rem 1rem;
+      }
+
+      @include mixins.md {
+        font-size: 1.15rem;
+        padding: 0.5rem 2rem;
+      }
+
+      @include mixins.lg {
+        font-size: 1.25rem;
+        padding: 0.75rem 2.25rem;
+      }
+    }
+
+    @include mixins.sm {
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+    }
+
+    @include mixins.md {
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    @include mixins.lg {
+      gap: 1.75rem;
+      margin-top: 1rem;
+    }
+  }
+
+  @include mixins.sm {
+    height: 22rem;
+  }
+
+  @include mixins.md {
+    height: 30rem;
+  }
+
+  @include mixins.lg {
+    height: 38.75rem;
+  }
+
+  @include mixins.xl {
+    height: 38.75rem;
+  }
+}
+
+.showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__phones {
+    position: relative;
+  }
+
+  &__phone {
+    position: absolute;
+
+    &--first {
+      animation: bounce 2s infinite ease-in-out;
+
+      @include mixins.sm {
+        width: 22rem;
+        top: -19.5rem;
+        left: -13.5rem;
+        z-index: 10;
+      }
+
+      @include mixins.md {
+        width: 32rem;
+        top: -30rem;
+        left: -20rem;
+        z-index: 10;
+      }
+
+      @include mixins.lg {
+        width: min-content;
+        top: -34rem;
+        left: -22.75rem;
+        z-index: 10;
+      }
+    }
+
+    &--second {
+      animation: bounce 2s infinite ease-in-out 0.5s;
+
+      @include mixins.sm {
+        width: 10rem;
+        top: -12rem;
+        right: -9.75rem;
+      }
+
+      @include mixins.md {
+        width: 14.5rem;
+        top: -18rem;
+        right: -14rem;
+      }
+
+      @include mixins.lg {
+        width: min-content;
+        top: -20.5rem;
+        right: -17.75rem;
+      }
+    }
+  }
+
+  @include mixins.sm {
+    height: 24rem;
+  }
+
+  @include mixins.md {
+    height: 34rem;
+  }
+
+  @include mixins.lg {
+    height: 38.75rem;
+  }
+}
+
+.divider {
+  width: 55rem;
+  border: 0.15rem solid #e4e4e4;
+  margin: 0 auto;
+
+  @include mixins.sm {
+    width: 90%;
+  }
+
+  @include mixins.md {
+    width: 80%;
+  }
+}
+
+.features {
+  &__heading {
+    font-family: variables.$secondary-font;
+    font-weight: 600;
+    text-align: center;
+    color: variables.$dark-color;
+    animation: scaleIn 1s ease-out;
+
+    @include mixins.sm {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    @include mixins.md {
+      font-size: 2rem;
+      margin-bottom: 6rem;
+    }
+
+    @include mixins.lg {
+      font-size: 2.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 8rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mixins.sm {
+      flex-direction: column;
+      overflow: hidden;
+      margin-top: 0;
+      &:nth-child(2) {
+        flex-direction: column-reverse;
+      }
+      &:nth-child(4) {
+        margin-top: 6rem;
+        flex-direction: column-reverse;
+      }
+    }
+
+    @include mixins.md {
+      flex-direction: column;
+      &:nth-child(2) {
+        margin-top: 6rem;
+      }
+      &:nth-child(4) {
+        margin-top: 6rem;
+      }
+    }
+
+    @include mixins.lg {
+      flex-direction: row;
+      gap: 2rem;
+      &:not(:first-child) {
+        margin-top: -10rem;
+      }
+      &:nth-child(2) {
+        flex-direction: row;
+      }
+      &:nth-child(3) {
+        justify-content: space-between;
+      }
+      &:nth-child(4) {
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @include mixins.lg {
+      &:nth-child(1) {
+        padding-left: 6rem;
+      }
+    }
+
+    @include mixins.xl {
+      &:nth-child(1) {
+        padding-left: 16rem;
+      }
+    }
+  }
+
+  &__step {
+    font-size: 1.5rem;
+    color: variables.$primary-color;
+    font-weight: 700;
+  }
+
+  &__title {
+    color: variables.$dark-color;
+    font-weight: 700;
+
+    @include mixins.sm {
+      font-size: 1.75rem;
+    }
+
+    @include mixins.md {
+      font-size: 2.5rem;
+    }
+
+    @include mixins.lg {
+      font-size: 2.25rem;
+      line-height: 3.25rem;
+    }
+
+    @include mixins.xl {
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.15rem;
+    color: variables.$light-gray-color;
+    font-weight: 500;
+    line-height: 2rem;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    @include mixins.sm {
+      max-width: 100%;
+      max-height: 30rem;
+    }
+
+    @include mixins.md {
+      max-width: 90%;
+      max-height: 40rem;
+    }
+
+    @include mixins.lg {
+      max-width: 90%;
+      max-height: min-content;
+      &:nth-child(2) {
+        margin-right: -6rem;
+      }
+    }
+
+    @include mixins.xl {
+      &:nth-child(2) {
+        margin-right: -1rem;
+      }
+    }
+  }
+}
+
+.footer {
+  &__top {
+    background-image: url("/src/images/footer-bg.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: variables.$white-color;
+
+    @include mixins.sm {
+      height: 22rem;
+      padding: 1rem;
+      gap: 1.5rem;
+    }
+
+    @include mixins.md {
+      height: 28rem;
+      padding: 1rem;
+      gap: 1.75rem;
+    }
+
+    @include mixins.lg {
+      height: 32.25rem;
+      gap: 2rem;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    animation: scaleIn 1s ease-out;
+
+    @include mixins.sm {
+      font-size: 1.5rem;
+    }
+
+    @include mixins.md {
+      font-size: 2rem;
+    }
+
+    @include mixins.lg {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__description {
+    font-weight: 500;
+    text-align: center;
+    animation: fadeInLeft 1s ease-out;
+
+    @include mixins.sm {
+      font-size: 1rem;
+      width: 90%;
+    }
+
+    @include mixins.md {
+      font-size: 1.25rem;
+    }
+
+    @include mixins.lg {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    animation: slideIn 1.2s ease-out;
+
+    .button {
+      font-weight: 700;
+      border-radius: 0.75rem;
+      cursor: pointer;
+
+      @include mixins.sm {
+        font-size: 0.75rem;
+        padding: 0.5rem 1.5rem;
+      }
+
+      @include mixins.md {
+        font-size: 1rem;
+        padding: 0.75rem 2rem;
+      }
+
+      @include mixins.lg {
+        padding: 1rem 2.5rem;
+      }
+
+      &--playstore {
+        background-color: variables.$primary-color;
+        color: variables.$white-color;
+        border: 1px solid transparent;
+
+        @include mixins.md {
+          &:hover {
+            background-color: transparent;
+            border: 1px solid variables.$white-color;
+            transition: background-color 0.5s ease-in-out;
+          }
+        }
+      }
+
+      &--appstore {
+        background-color: transparent;
+        color: variables.$white-color;
+        border: 1px solid variables.$white-color;
+
+        @include mixins.md {
+          &:hover {
+            background-color: variables.$primary-color;
+            border: 1px solid transparent;
+            transition: background-color 0.5s ease-in-out;
+          }
+        }
+      }
+    }
+
+    @include mixins.sm {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    @include mixins.md {
+      flex-direction: row;
+      gap: 1.5rem;
+      margin-top: 1.75rem;
+    }
+
+    @include mixins.lg {
+      gap: 1.75rem;
+      margin-top: 2rem;
+    }
+  }
+
+  .footer__bottom {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @include mixins.sm {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+      padding: 1.5rem 0;
+    }
+
+    @include mixins.md {
+      text-align: center;
+      gap: 1.5rem;
+      padding: 1.75rem 0;
+    }
+
+    @include mixins.lg {
+      flex-direction: row;
+      padding: 2rem 0;
+    }
+  }
+
+  &__logo {
+    max-width: 10rem;
+
+    @include mixins.sm {
+      width: min-content;
+      height: 3rem;
+    }
+
+    @include mixins.md {
+      height: 4rem;
+    }
+
+    @include mixins.lg {
+      height: min-content;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 3rem;
+
+    @include mixins.sm {
+      gap: 1rem;
+    }
+
+    @include mixins.md {
+      gap: 2rem;
+    }
+  }
+
+  &__social-item {
+    list-style: none;
+  }
+
+  &__social-link {
+    display: inline-block;
+
+    @include mixins.sm {
+      img {
+        width: 2rem;
+      }
+    }
+
+    @include mixins.md {
+      img {
+        width: 2.5rem;
+      }
+    }
+
+    @include mixins.lg {
+      img {
+        width: min-content;
+      }
+    }
+  }
+
+  &__copyright {
+    font-weight: 700;
+    color: #5c5c5c;
+    font-family: "Roboto", sans-serif;
+
+    @include mixins.sm {
+      font-size: 0.75rem;
+    }
+
+    @include mixins.md {
+      font-size: 1rem;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

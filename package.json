@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass src/sass/main.sass src/css/main.css && sass --watch src/sass/main.sass:src/css/main.css"
+    "sass": "sass src/scss/main.scss src/css/main.css && sass --watch src/scss/main.scss:src/css/main.css"
   },
   "keywords": [],
   "author": "",
